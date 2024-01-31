@@ -1,0 +1,48 @@
+/* survey.page.scss */
+.container {
+    padding: 16px;
+  }
+  
+  .survey-card {
+    --background: #fff; /* Change to match your card background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust to match your design */
+    border-radius: 8px;
+  }
+  
+  .section-title {
+    font-weight: bold;
+    color: #000; /* Change to match your title color */
+    margin-bottom: 8px;
+  }
+  
+  .survey-section {
+    margin-bottom: 16px;
+  }
+  
+  .athlete-checkbox {
+    --background: #F2F2F2; /* Change to match your checkbox background color */
+    --border-radius: 8px;
+    margin-top: 16px;
+    padding: 16px;
+  }
+  
+  .continue-button {
+    --background: #84C887; /* Change to match your button color */
+    margin-top: 16px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  ion-button {
+    margin-top: 20px;
+  }
+  
+  ion-radio {
+    --color: #000; /* Change to match your radio button color */
+  }
+  
+  ion-checkbox {
+    --background-checked: #84C887; /* Change to match your checkbox color */
+    --border-color: #84C887; /* Change to match your checkbox border color */
+  }
+  

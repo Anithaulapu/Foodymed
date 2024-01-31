@@ -1,0 +1,81 @@
+ion-header {
+  --background: #fff; // or any other color that matches your design
+  --ion-color-base: #fff; // to ensure text is visible if using a light background
+}
+
+ion-toolbar {
+  --background: #fff; // or any other color that matches your design
+}
+
+ion-title {
+  color: #000; // Adjust the color to match your design
+}
+
+ion-card {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // This adds a subtle shadow to the card
+
+  ion-card-header {
+    background-color: #f0f0f0; // Adjust the color to match your design
+    text-align: center;
+  }
+
+  ion-card-title {
+    font-size: 1.2em;
+    color: #000; // Adjust the color to match your design
+  }
+
+  ion-card-subtitle {
+    color: #666; // Adjust the color to match your design
+    margin-bottom: 15px;
+  }
+
+  ion-item {
+    --background: #fff; // Sets the background color for the ion-item
+    --placeholder-color: #aaa; // Color of the placeholder text
+    --placeholder-font-style: italic;
+    --placeholder-opacity: 1;
+    --color: #000; // Text color
+    --padding-start: 0px;
+    --inner-padding-end: 0px;
+    --border-color: #ccc; // Border color
+    --border-width: 0px 0px 1px 0px; // Only bottom border
+    --border-style: solid;
+    margin-bottom: 8px; // Spacing between items
+  }
+
+  ion-label {
+    --color: #333; // Color of the label
+  }
+
+  ion-input {
+    --padding-start: 0px; // Adjusts padding inside the input
+    --padding-end: 0px; // Adjusts padding inside the input
+  }
+
+  ion-checkbox {
+    --background: #fff; // Checkbox background color when unchecked
+    --background-checked: #3880ff; // Checkbox background color when checked
+    --border-color: #c0c0c0; // Checkbox border color
+    --border-style: solid;
+    --border-width: 2px; // Width of the checkbox border
+    margin-right: 5px; // Space between the checkbox and the label
+  }
+
+  ion-button {
+    --background: #3880ff; // Adjust button color to match your design
+    --border-radius: 4px; // Button corner rounding
+    --color: #fff; // Text color for the button
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+
+
+}
+ion-card-header+.card-content-md {
+    padding-top: 0px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+/* Additional styles for other elements if needed */

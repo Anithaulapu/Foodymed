@@ -1,17 +1,46 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Registrazione</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Registrati per cominciare</ion-card-title>
+      <ion-card-subtitle>Compila il test gratuito</ion-card-subtitle>
+    </ion-card-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <ion-card-content>
+      <ion-list lines="full" >
+        <ion-item>
+          <ion-label position="floating">Nome</ion-label>
+          <ion-input type="text" required [(ngModel)]="registrationData.firstName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Cognome</ion-label>
+          <ion-input type="text" required [(ngModel)]="registrationData.lastName"> </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Indirizzo email</ion-label>
+          <ion-input type="email" required [(ngModel)]="registrationData.email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password - minimo 8 caratteri</ion-label>
+          <ion-input type="password" required minlength="8"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-item lines="none">
+            <ion-label>Accetto l'informativa sul trattamento dei dati personali.</ion-label>
+            <ion-checkbox slot="start"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-button expand="block" (click)="register()" type="submit">Crea</ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

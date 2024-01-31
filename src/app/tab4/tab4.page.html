@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Indietro"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">CIAO PIPPO</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <h2 class="heading">QUAL È IL TUO OBIETTIVO?</h2>
+    <div class="gender-selection">
+      <ion-segment [(ngModel)]="userInfo.gender">
+        <ion-segment-button value="female">
+          <ion-label>DONNA</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="male">
+          <ion-label>UOMO</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+    <div class="info-fields">
+      <ion-item>
+        <ion-label position="floating">ETÀ</ion-label>
+        <ion-input type="number" [(ngModel)]="userInfo.age"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">ALTEZZA (cm)</ion-label>
+        <ion-input type="number" [(ngModel)]="userInfo.height"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">PESO (kg)</ion-label>
+        <ion-input type="number" [(ngModel)]="userInfo.weight"></ion-input>
+      </ion-item>
+    </div>
+    <ion-button expand="full" class="continue-button" (click)="saveUserInfo()">CONTINUA</ion-button>
+  </div>
+</ion-content>

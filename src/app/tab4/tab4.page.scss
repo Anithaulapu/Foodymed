@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 16px;
+  }
+  
+  .heading {
+    text-align: center;
+    margin: 24px 0;
+  }
+  
+  .gender-selection {
+    margin: 24px 0;
+  }
+  
+  .info-fields {
+    width: 100%; // Adjust width as needed
+    --padding-start: 0;
+    --padding-end: 0;
+    --inner-padding-end: 0;
+    margin-bottom: 24px;
+  }
+  
+  .continue-button {
+    --background: #32db64; // Adjust the color to match your design
+  }
+  

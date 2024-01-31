@@ -1,17 +1,49 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text="Indietro"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Il Tuo Obiettivo</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" class="ion-text-center">
+        <h2>QUAL È IL TUO OBIETTIVO?</h2>
+      </ion-col>
+    </ion-row>
+    <ion-radio-group [(ngModel)]="selectedGoal">
+      <!-- First row for the first two goals -->
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="3" *ngFor="let goal of goals.slice(0, 2)">
+          <ion-card>
+            <ion-img [src]="goal.img"></ion-img>
+            <ion-card-content>
+              <ion-item lines="none">
+                <ion-label>{{ goal.title }}</ion-label>
+                <ion-radio slot="start" [value]="goal.value"></ion-radio>
+              </ion-item>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <!-- Second row for the next two goals -->
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="3" *ngFor="let goal of goals.slice(2, 4)">
+          <ion-card>
+            <ion-img [src]="goal.img"></ion-img>
+            <ion-card-content>
+              <ion-item lines="none">
+                <ion-label>{{ goal.title }}</ion-label>
+                <ion-radio slot="start" [value]="goal.value"></ion-radio>
+              </ion-item>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-radio-group>
+  </ion-grid>
+  <ion-button expand="block" (click)="saveGoal()">CONTINUA</ion-button>
 </ion-content>
